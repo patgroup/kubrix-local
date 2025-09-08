@@ -1,0 +1,140 @@
+# This is a basic workflow to help you get started with Actions
+
+name: kind
+
+# Controls when the workflow will run
+on:
+  # do a full cluster test in main branch and when opening or changing PRs
+  push:
+    branches: [ "main" ]
+    paths:
+      - '.github/workflows/cluster-test.yml'
+      - '.github/kind-config.yaml'
+      - 'platform-apps/charts/**'
+      - 'platform-apps/target-chart/templates/**'
+      - 'platform-apps/target-chart/values.yaml'
+      - 'platform-apps/target-chart/values-kind*'
+      - 'install-platform.sh'
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - '.github/workflows/cluster-test.yml'
+      - '.github/kind-config.yaml'
+      - 'platform-apps/charts/**'
+      - 'platform-apps/target-chart/templates/**'
+      - 'platform-apps/target-chart/values.yaml'
+      - 'platform-apps/target-chart/values-kind*'
+      - 'install-platform.sh'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  KUBRIX_REPO_BRANCH: ${{ github.head_ref || github.ref_name }}
+  KUBRIX_REPO: "https://github.com/${{ github.repository }}"
+  
+jobs:
+  create-cluster:
+    runs-on: ${{ vars.KUBRIX_GITHUB_RUNNER || 'ubuntu-latest' }}
+    permissions: read-all
+    strategy:
+      matrix:
+        target-type:
+          - KIND-DELIVERY
+          - KIND-OBSERVABILITY
+          - KIND-SECURITY
+          - KIND-PORTAL
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+ 
+      - name: Create k8s Kind Cluster
+        uses: helm/kind-action@v1
+        with:
+          cluster_name: kubrix-cluster
+          config: ${{ github.workspace }}/.github/kind-config.yaml
+          
+      - name: install mkcert
+        shell: bash
+        run: |
+          curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64"
+          chmod +x mkcert-v*-linux-amd64
+          sudo cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert
+    
+      - name: install k8sgpt
+        shell: bash
+        run: |
+          curl -LO https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.30/k8sgpt_amd64.deb
+          sudo dpkg -i k8sgpt_amd64.deb
+          k8sgpt analyze
+
+      - name: install kubriX stack
+        env:
+          KUBRIX_TARGET_TYPE: ${{ matrix.target-type }}
+          KUBRIX_CLUSTER_TYPE: "KIND"
+          KUBRIX_BACKSTAGE_GITHUB_CLIENTSECRET: "dummy"
+          KUBRIX_BACKSTAGE_GITHUB_CLIENTID: "dummy"
+          KUBRIX_BACKSTAGE_GITHUB_TOKEN: "dummy"
+          KUBRIX_ARGOCD_APPSET_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KUBRIX_REPO_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          KUBRIX_REPO_USERNAME: "dummy"
+          KUBRIX_INSTALL_DEBUG: "false"
+          KUBRIX_BOOTSTRAP_MAX_WAIT_TIME: ${{ vars.KUBRIX_BOOTSTRAP_MAX_WAIT_TIME }}
+        shell: bash
+        run: |
+          ./install-platform.sh
+
+      - name: argocd show diff
+        continue-on-error: true
+        if: always()
+        env:
+          KUBRIX_TARGET_TYPE: ${{ matrix.target-type }}
+        shell: bash
+        run: |
+          target_chart_values_file=platform-apps/target-chart/values-$(echo ${KUBRIX_TARGET_TYPE} | awk '{print tolower($0)}').yaml
+          argocd_apps=$(cat $target_chart_values_file | awk '/^  - name:/ { printf "%s", "sx-"$3" "}' )
+          curl -kL -o argocd https://argocd.127-0-0-1.nip.io/download/argocd-linux-amd64
+          chmod u+x argocd
+          ls -l
+          INITIAL_ARGOCD_PASSWORD=$( kubectl get secret -n argocd argocd-initial-admin-secret -o=jsonpath={'.data.password'} | base64 -d )
+          ./argocd login argocd.127-0-0-1.nip.io --grpc-web --insecure --username admin --password ${INITIAL_ARGOCD_PASSWORD}
+          for app in ${argocd_apps} ; do echo "$app diff" ; ./argocd app diff $app --grpc-web ; done         
+          
+      - name: kubectl get applications
+        if: always()
+        shell: bash
+        run: |
+          kubectl get applications -n argocd
+          kubectl get applications -n argocd -o yaml
+          
+      - name: analyze with k8sgpt
+        if: always()
+        shell: bash
+        run: |
+          k8sgpt analyze
+          
+      - name: mustgather data for troubleshooting
+        if: ${{ failure() }}
+        shell: bash
+        run: |
+          echo "===== node describe ======"
+          kubectl describe node kubrix-cluster-control-plane
+          echo "===== node top  ======"
+          kubectl top node
+          echo "===== node yaml ======"
+          kubectl get nodes -o yaml
+          echo "===== yaml output of all applications ======"
+          kubectl get application -n argocd -o yaml
+
+      - name: mustgather logs for troubleshooting
+        if: ${{ failure() }}
+        shell: bash
+        run: |
+          kubectl logs -n argocd statefulset/sx-argocd-application-controller
+          kubectl logs -n argocd deployment/sx-argocd-repo-server
+          kubectl logs -n argocd deployment/sx-argocd-applicationset-controller
+          kubectl get pods -o name -n crossplane | xargs -I {} kubectl logs -n crossplane {} --all-containers=true
