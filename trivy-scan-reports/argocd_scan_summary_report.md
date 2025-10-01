@@ -293,7 +293,37 @@
 <h4>No Vulnerabilities found</h4>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/local/bin/argocd</code></h3>
-<h4>No Vulnerabilities found</h4>
+<h4>Vulnerabilities (3)</h4>
+<table>
+    <tr>
+        <th>Package</th>
+        <th>ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/argoproj/argo-cd/v3</code></td>
+        <td>CVE-2025-59531</td>
+        <td>HIGH</td>
+        <td>3.1.3</td>
+        <td>3.2.0-rc2, 3.1.8, 3.0.19</td>
+    </tr>
+    <tr>
+        <td><code>github.com/argoproj/argo-cd/v3</code></td>
+        <td>CVE-2025-59537</td>
+        <td>HIGH</td>
+        <td>3.1.3</td>
+        <td>3.2.0-rc2, 3.1.8, 3.0.19</td>
+    </tr>
+    <tr>
+        <td><code>github.com/argoproj/argo-cd/v3</code></td>
+        <td>CVE-2025-59538</td>
+        <td>HIGH</td>
+        <td>3.1.3</td>
+        <td>3.2.0-rc2, 3.1.8, 3.0.19</td>
+    </tr>
+</table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/local/bin/helm</code></h3>
 <h4>Vulnerabilities (1)</h4>
