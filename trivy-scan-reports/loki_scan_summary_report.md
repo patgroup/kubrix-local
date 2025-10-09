@@ -165,7 +165,7 @@
 
 <h3>Trivy Returned Empty Report</h3>
 
-<h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.29-alpine (alpine 3.22.1)</code></h3>
+<h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.29-alpine (alpine 3.22.2)</code></h3>
 <h4>No Vulnerabilities found</h4>
 <h4>No Misconfigurations found</h4>
 
