@@ -1,6 +1,6 @@
 
 <h3>Target <code>ghcr.io/grafana/alloy-operator:1.2.0 (redhat 9.6)</code></h3>
-<h4>Vulnerabilities (3)</h4>
+<h4>Vulnerabilities (4)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -15,6 +15,13 @@
         <td>HIGH</td>
         <td>3.5.3-5.el9_6</td>
         <td>3.5.3-6.el9_6</td>
+    </tr>
+    <tr>
+        <td><code>libxml2</code></td>
+        <td>CVE-2025-12863</td>
+        <td>HIGH</td>
+        <td>2.9.13-10.el9_6</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>libxml2</code></td>
@@ -33,7 +40,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/local/bin/helm-operator</code></h3>
-<h4>Vulnerabilities (7)</h4>
+<h4>Vulnerabilities (8)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -41,6 +48,13 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/containerd/containerd</code></td>
+        <td>CVE-2024-25621</td>
+        <td>HIGH</td>
+        <td>v1.7.27</td>
+        <td>1.7.29</td>
     </tr>
     <tr>
         <td><code>stdlib</code></td>
@@ -109,7 +123,7 @@
         <td>CVE-2025-52881</td>
         <td>HIGH</td>
         <td>v1.11.1</td>
-        <td></td>
+        <td>1.13.0</td>
     </tr>
     <tr>
         <td><code>stdlib</code></td>
@@ -164,7 +178,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>quay.io/sustainable_computing_io/kepler:release-0.8.0 (redhat 9.5)</code></h3>
-<h4>Vulnerabilities (5)</h4>
+<h4>Vulnerabilities (6)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -179,6 +193,13 @@
         <td>HIGH</td>
         <td>3.5.3-4.el9</td>
         <td>3.5.3-6.el9_6</td>
+    </tr>
+    <tr>
+        <td><code>libxml2</code></td>
+        <td>CVE-2025-12863</td>
+        <td>HIGH</td>
+        <td>2.9.13-6.el9_5.2</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>libxml2</code></td>

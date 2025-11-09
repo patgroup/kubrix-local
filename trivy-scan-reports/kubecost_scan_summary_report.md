@@ -510,7 +510,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>root/.local/share/helm/plugins/helm-diff/bin/diff</code></h3>
-<h4>Vulnerabilities (25)</h4>
+<h4>Vulnerabilities (26)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -518,6 +518,13 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/containerd/containerd</code></td>
+        <td>CVE-2024-25621</td>
+        <td>HIGH</td>
+        <td>v1.7.0</td>
+        <td>1.7.29</td>
     </tr>
     <tr>
         <td><code>github.com/docker/docker</code></td>
@@ -697,7 +704,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>root/.local/share/helm/plugins/helm-push/bin/helm-cm-push</code></h3>
-<h4>Vulnerabilities (22)</h4>
+<h4>Vulnerabilities (23)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -705,6 +712,13 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/containerd/containerd</code></td>
+        <td>CVE-2024-25621</td>
+        <td>HIGH</td>
+        <td>v1.6.15</td>
+        <td>1.7.29</td>
     </tr>
     <tr>
         <td><code>github.com/docker/distribution</code></td>
@@ -1167,7 +1181,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/bin/eksctl</code></h3>
-<h4>Vulnerabilities (21)</h4>
+<h4>Vulnerabilities (22)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -1175,6 +1189,13 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/containerd/containerd</code></td>
+        <td>CVE-2024-25621</td>
+        <td>HIGH</td>
+        <td>v1.6.18</td>
+        <td>1.7.29</td>
     </tr>
     <tr>
         <td><code>github.com/docker/docker</code></td>
@@ -1326,7 +1347,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/bin/helm</code></h3>
-<h4>Vulnerabilities (18)</h4>
+<h4>Vulnerabilities (19)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -1334,6 +1355,13 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>github.com/containerd/containerd</code></td>
+        <td>CVE-2024-25621</td>
+        <td>HIGH</td>
+        <td>v1.7.6</td>
+        <td>1.7.29</td>
     </tr>
     <tr>
         <td><code>github.com/docker/docker</code></td>
@@ -1802,7 +1830,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>gcr.io/kubecost1/cost-model:prod-2.8.2 (redhat 9.6)</code></h3>
-<h4>Vulnerabilities (4)</h4>
+<h4>Vulnerabilities (5)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -1824,6 +1852,13 @@
         <td>HIGH</td>
         <td>3.5.3-5.el9_6</td>
         <td>3.5.3-6.el9_6</td>
+    </tr>
+    <tr>
+        <td><code>libxml2</code></td>
+        <td>CVE-2025-12863</td>
+        <td>HIGH</td>
+        <td>2.9.13-11.el9_6</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>pam</code></td>
@@ -1904,7 +1939,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>gcr.io/kubecost1/frontend:prod-2.8.2 (redhat 9.6)</code></h3>
-<h4>Vulnerabilities (4)</h4>
+<h4>Vulnerabilities (5)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -1926,6 +1961,13 @@
         <td>HIGH</td>
         <td>3.5.3-5.el9_6</td>
         <td>3.5.3-6.el9_6</td>
+    </tr>
+    <tr>
+        <td><code>libxml2</code></td>
+        <td>CVE-2025-12863</td>
+        <td>HIGH</td>
+        <td>2.9.13-11.el9_6</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>pam</code></td>
@@ -1945,7 +1987,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>gcr.io/kubecost1/kubecost-modeling:v0.1.28 (redhat 9.6)</code></h3>
-<h4>Vulnerabilities (4)</h4>
+<h4>Vulnerabilities (5)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -1967,6 +2009,13 @@
         <td>HIGH</td>
         <td>3.5.3-5.el9_6</td>
         <td>3.5.3-6.el9_6</td>
+    </tr>
+    <tr>
+        <td><code>libxml2</code></td>
+        <td>CVE-2025-12863</td>
+        <td>HIGH</td>
+        <td>2.9.13-10.el9_6</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>libxml2</code></td>
