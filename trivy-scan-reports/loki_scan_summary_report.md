@@ -1,6 +1,22 @@
 
 <h3>Target <code>docker.io/grafana/agent-operator:v0.44.2 (ubuntu 24.04)</code></h3>
-<h4>No Vulnerabilities found</h4>
+<h4>Vulnerabilities (1)</h4>
+<table>
+    <tr>
+        <th>Package</th>
+        <th>ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>gpgv</code></td>
+        <td>CVE-2025-68973</td>
+        <td>HIGH</td>
+        <td>2.4.4-2ubuntu17</td>
+        <td>2.4.4-2ubuntu17.4</td>
+    </tr>
+</table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/bin/grafana-agent-operator</code></h3>
 <h4>Vulnerabilities (6)</h4>
