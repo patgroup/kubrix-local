@@ -1,6 +1,6 @@
 
 <h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.27-alpine (alpine 3.21.3)</code></h3>
-<h4>Vulnerabilities (9)</h4>
+<h4>Vulnerabilities (13)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -8,6 +8,20 @@
         <th>Severity</th>
         <th>Installed Version</th>
         <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
     </tr>
     <tr>
         <td><code>libpng</code></td>
@@ -43,6 +57,20 @@
         <td>HIGH</td>
         <td>1.6.47-r0</td>
         <td>1.6.54-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
     </tr>
     <tr>
         <td><code>libxml2</code></td>

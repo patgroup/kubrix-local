@@ -1,9 +1,5 @@
 
 <h3>Target <code>alpine/curl:latest (alpine 3.23.2)</code></h3>
-<h4>No Vulnerabilities found</h4>
-<h4>No Misconfigurations found</h4>
-
-<h3>Target <code>hashicorp/vault:1.18.1 (alpine 3.20.3)</code></h3>
 <h4>Vulnerabilities (4)</h4>
 <table>
     <tr>
@@ -15,10 +11,72 @@
     </tr>
     <tr>
         <td><code>libcrypto3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.5.4-r0</td>
+        <td>3.5.5-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.5.4-r0</td>
+        <td>3.5.5-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.5.4-r0</td>
+        <td>3.5.5-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.5.4-r0</td>
+        <td>3.5.5-r0</td>
+    </tr>
+</table>
+<h4>No Misconfigurations found</h4>
+
+<h3>Target <code>hashicorp/vault:1.18.1 (alpine 3.20.3)</code></h3>
+<h4>Vulnerabilities (8)</h4>
+<table>
+    <tr>
+        <th>Package</th>
+        <th>ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.2-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
         <td>CVE-2024-12797</td>
         <td>HIGH</td>
         <td>3.3.2-r0</td>
         <td>3.3.3-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.2-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.2-r0</td>
+        <td>3.3.6-r0</td>
     </tr>
     <tr>
         <td><code>libssl3</code></td>
@@ -26,6 +84,13 @@
         <td>HIGH</td>
         <td>3.3.2-r0</td>
         <td>3.3.3-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.2-r0</td>
+        <td>3.3.6-r0</td>
     </tr>
     <tr>
         <td><code>musl</code></td>
@@ -127,7 +192,44 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>hashicorp/vault:1.19.0 (alpine 3.21.3)</code></h3>
-<h4>No Vulnerabilities found</h4>
+<h4>Vulnerabilities (4)</h4>
+<table>
+    <tr>
+        <th>Package</th>
+        <th>ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+</table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>bin/vault</code></h3>
 <h4>Vulnerabilities (6)</h4>
@@ -185,7 +287,44 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>hashicorp/vault:1.19.5 (alpine 3.21.3)</code></h3>
-<h4>No Vulnerabilities found</h4>
+<h4>Vulnerabilities (4)</h4>
+<table>
+    <tr>
+        <th>Package</th>
+        <th>ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-15467</td>
+        <td>CRITICAL</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+</table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>bin/vault</code></h3>
 <h4>Vulnerabilities (11)</h4>
