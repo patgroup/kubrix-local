@@ -61,7 +61,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/local/bin/helm-operator</code></h3>
-<h4>Vulnerabilities (4)</h4>
+<h4>Vulnerabilities (6)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -93,6 +93,20 @@
     </tr>
     <tr>
         <td><code>stdlib</code></td>
+        <td>CVE-2025-61726</td>
+        <td>HIGH</td>
+        <td>v1.24.5</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61728</td>
+        <td>HIGH</td>
+        <td>v1.24.5</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
         <td>CVE-2025-61729</td>
         <td>HIGH</td>
         <td>v1.24.5</td>
@@ -102,7 +116,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>bin/node_exporter</code></h3>
-<h4>Vulnerabilities (4)</h4>
+<h4>Vulnerabilities (6)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -131,6 +145,20 @@
         <td>HIGH</td>
         <td>v1.23.7</td>
         <td>1.24.8, 1.25.2</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61726</td>
+        <td>HIGH</td>
+        <td>v1.23.7</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61728</td>
+        <td>HIGH</td>
+        <td>v1.23.7</td>
+        <td>1.24.12, 1.25.6</td>
     </tr>
     <tr>
         <td><code>stdlib</code></td>
@@ -218,7 +246,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>usr/bin/kepler</code></h3>
-<h4>Vulnerabilities (5)</h4>
+<h4>Vulnerabilities (7)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -257,6 +285,20 @@
     </tr>
     <tr>
         <td><code>stdlib</code></td>
+        <td>CVE-2025-61726</td>
+        <td>HIGH</td>
+        <td>v1.22.9</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61728</td>
+        <td>HIGH</td>
+        <td>v1.22.9</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
         <td>CVE-2025-61729</td>
         <td>HIGH</td>
         <td>v1.22.9</td>
@@ -269,7 +311,7 @@
 <h4>No Vulnerabilities found</h4>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>kube-state-metrics</code></h3>
-<h4>Vulnerabilities (3)</h4>
+<h4>Vulnerabilities (5)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -291,6 +333,20 @@
         <td>HIGH</td>
         <td>v1.24.4</td>
         <td>1.24.8, 1.25.2</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61726</td>
+        <td>HIGH</td>
+        <td>v1.24.4</td>
+        <td>1.24.12, 1.25.6</td>
+    </tr>
+    <tr>
+        <td><code>stdlib</code></td>
+        <td>CVE-2025-61728</td>
+        <td>HIGH</td>
+        <td>v1.24.4</td>
+        <td>1.24.12, 1.25.6</td>
     </tr>
     <tr>
         <td><code>stdlib</code></td>
