@@ -1,6 +1,6 @@
 
 <h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.27-alpine (alpine 3.21.3)</code></h3>
-<h4>Vulnerabilities (13)</h4>
+<h4>Vulnerabilities (15)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -19,6 +19,13 @@
     <tr>
         <td><code>libcrypto3</code></td>
         <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libcrypto3</code></td>
+        <td>CVE-2025-69421</td>
         <td>HIGH</td>
         <td>3.3.3-r0</td>
         <td>3.3.6-r0</td>
@@ -68,6 +75,13 @@
     <tr>
         <td><code>libssl3</code></td>
         <td>CVE-2025-69419</td>
+        <td>HIGH</td>
+        <td>3.3.3-r0</td>
+        <td>3.3.6-r0</td>
+    </tr>
+    <tr>
+        <td><code>libssl3</code></td>
+        <td>CVE-2025-69421</td>
         <td>HIGH</td>
         <td>3.3.3-r0</td>
         <td>3.3.6-r0</td>
