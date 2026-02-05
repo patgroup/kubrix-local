@@ -308,7 +308,7 @@
 <h3>Trivy Returned Empty Report</h3>
 
 <h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.29-alpine (alpine 3.22.2)</code></h3>
-<h4>Vulnerabilities (6)</h4>
+<h4>Vulnerabilities (7)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -337,6 +337,13 @@
         <td>HIGH</td>
         <td>3.5.4-r0</td>
         <td>3.5.5-r0</td>
+    </tr>
+    <tr>
+        <td><code>libexpat</code></td>
+        <td>CVE-2026-24515</td>
+        <td>CRITICAL</td>
+        <td>2.7.3-r0</td>
+        <td>2.7.4-r0</td>
     </tr>
     <tr>
         <td><code>libssl3</code></td>
