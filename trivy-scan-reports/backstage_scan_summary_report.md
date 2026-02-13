@@ -69,7 +69,7 @@
 <h4>No Misconfigurations found</h4>
 
 <h3>Target <code>ghcr.io/suxess-it/sx-backstage:v1.38.1 (debian 12.11)</code></h3>
-<h4>Vulnerabilities (402)</h4>
+<h4>Vulnerabilities (403)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -2600,6 +2600,13 @@
     </tr>
     <tr>
         <td><code>linux-libc-dev</code></td>
+        <td>CVE-2025-71089</td>
+        <td>HIGH</td>
+        <td>6.1.140-1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>linux-libc-dev</code></td>
         <td>CVE-2025-71116</td>
         <td>HIGH</td>
         <td>6.1.140-1</td>
@@ -2895,7 +2902,7 @@
 </table>
 <h4>No Misconfigurations found</h4>
 <h3>Target <code>Node.js</code></h3>
-<h4>Vulnerabilities (101)</h4>
+<h4>Vulnerabilities (99)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -3036,20 +3043,6 @@
         <td>HIGH</td>
         <td>7.0.3</td>
         <td>7.0.5, 6.0.6</td>
-    </tr>
-    <tr>
-        <td><code>fast-xml-parser</code></td>
-        <td>CVE-2026-25128</td>
-        <td>HIGH</td>
-        <td>4.4.1</td>
-        <td>5.3.4</td>
-    </tr>
-    <tr>
-        <td><code>fast-xml-parser</code></td>
-        <td>CVE-2026-25128</td>
-        <td>HIGH</td>
-        <td>4.5.3</td>
-        <td>5.3.4</td>
     </tr>
     <tr>
         <td><code>fast-xml-parser</code></td>
