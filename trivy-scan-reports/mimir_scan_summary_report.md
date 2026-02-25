@@ -1,6 +1,6 @@
 
 <h3>Target <code>docker.io/nginxinc/nginx-unprivileged:1.27-alpine (alpine 3.21.3)</code></h3>
-<h4>Vulnerabilities (15)</h4>
+<h4>Vulnerabilities (16)</h4>
 <table>
     <tr>
         <th>Package</th>
@@ -64,6 +64,13 @@
         <td>HIGH</td>
         <td>1.6.47-r0</td>
         <td>1.6.54-r0</td>
+    </tr>
+    <tr>
+        <td><code>libpng</code></td>
+        <td>CVE-2026-25646</td>
+        <td>HIGH</td>
+        <td>1.6.47-r0</td>
+        <td>1.6.55-r0</td>
     </tr>
     <tr>
         <td><code>libssl3</code></td>
